@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4ed0f53-0eca-4884-ac1d-3bd3bc2617af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../resources/views/errors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.env.testing" beforeDir="false" afterPath="$PROJECT_DIR$/../.env.testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/ItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/todo/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/todo/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tests/Unit/ItemControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/Unit/ItemControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/database.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../resources/views/todo/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+              <caret line="49" selection-start-line="49" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -35,6 +30,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
               <caret line="9" column="45" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2212">
+              <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -65,7 +78,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" />
         <option value="$PROJECT_DIR$/../routes/web.php" />
         <option value="$PROJECT_DIR$/../tests/Unit/ItemTest.php" />
-        <option value="$PROJECT_DIR$/../.env" />
         <option value="$PROJECT_DIR$/../app/Services/RemoveItem.php" />
         <option value="$PROJECT_DIR$/../app/Services/ItemRemover.php" />
         <option value="$PROJECT_DIR$/../app/Services/ItemCreator.php" />
@@ -77,6 +89,9 @@
         <option value="$PROJECT_DIR$/../resources/views/errors.blade.php" />
         <option value="$PROJECT_DIR$/../resources/views/layout.blade.php" />
         <option value="$PROJECT_DIR$/../resources/views/todo/index.blade.php" />
+        <option value="$PROJECT_DIR$/../Procfile" />
+        <option value="$PROJECT_DIR$/../.env" />
+        <option value="$PROJECT_DIR$/../config/database.php" />
       </list>
     </option>
   </component>
@@ -187,6 +202,11 @@
             <path>
               <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="Avaliação-ESIG" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="Avaliação-ESIG" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -248,12 +268,12 @@
       <workItem from="1558642257851" duration="19652000" />
       <workItem from="1558702910384" duration="20086000" />
       <workItem from="1558791077659" duration="13762000" />
-      <workItem from="1558886042856" duration="4384000" />
+      <workItem from="1558886042856" duration="7624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57884000" />
+    <option name="totallyTimeSpent" value="61124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="768" extended-state="6" />
@@ -285,13 +305,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -344,13 +357,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/Services/ItemRemover.php" />
     <entry file="file://$PROJECT_DIR$/../app/Services/ItemCreator.php" />
-    <entry file="file://$PROJECT_DIR$/../.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../tests/Feature/ExampleTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-112">
@@ -416,10 +422,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../resources/views/todo/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+          <caret line="49" selection-start-line="49" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2212">
+          <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
         </state>
       </provider>
     </entry>
