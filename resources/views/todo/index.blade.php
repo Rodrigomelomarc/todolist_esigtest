@@ -5,6 +5,7 @@
         <div class="mt-5 text-secondary justify-content-center">
             <h1>To-do List</h1>
         </div>
+        @include('errors', ['errors' => $errors])
         <form class="row" action="{{ route('items.store') }}" method="post">
             @csrf
             <div class="col col-10">

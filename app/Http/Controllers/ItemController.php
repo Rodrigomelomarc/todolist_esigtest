@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ItemFormRequest;
 use App\Item;
 use App\Services\ItemCreator;
 use Illuminate\Http\Request;
@@ -18,9 +19,9 @@ class ItemController extends Controller
         return view('todo.index', compact('items'));
     }
     
-    public function store(Request $request)
+    public function store(ItemFormRequest $itemFormRequest)
     {
-        $nome = $request->nome;
+        $nome = $itemFormRequest->nome;
         Item::create(['nome' => $nome]);
 
         return redirect()->route('items.index');
