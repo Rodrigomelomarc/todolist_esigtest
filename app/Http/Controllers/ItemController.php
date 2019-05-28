@@ -13,10 +13,16 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::query()
-            ->orderBy('created_at')
-            ->get();
+                ->where('done', '=', 'false')
+                ->orderBy('created_at')
+                ->get();
 
-        return view('todo.index', compact('items'));
+        $completedItems = Item::query()
+                        ->where('done', '=', 'true')
+                        ->orderBy('created_at')
+                        ->get();
+
+        return view('todo.index', compact('items', 'completedItems'));
     }
     
     public function store(ItemFormRequest $itemFormRequest)
@@ -38,6 +44,20 @@ class ItemController extends Controller
         $item = Item::find($id);
         $nome = $request->nome;
         $item->nome = $nome;
+        $item->save();
+    }
+
+    public function updateItemToDone(int $id)
+    {
+        $item = Item::find($id);
+        $item->done = true;
+        $item->save();
+    }
+
+    public function updateItemToUnDone(int $id)
+    {
+        $item = Item::find($id);
+        $item->done = false;
         $item->save();
     }
 }
