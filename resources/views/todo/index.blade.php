@@ -1,38 +1,46 @@
 @extends('layout')
 
 @section('content')
-    <div class="w-50 mx-auto">
+    <div class="w-md-50 mx-auto">
         <div class="mt-5 text-secondary justify-content-center">
             <h1>To-do List</h1>
         </div>
-        @include('errors', ['errors' => $errors])
         <form class="row" action="{{ route('items.store') }}" method="post">
             @csrf
-            <div class="col col-10">
+            <div class="col col-md-10">
                 <input type="text"
                        name="nome"
                        class="form-control"
                        placeholder="Adicione aqui um item a lista de tarefas">
             </div>
 
-                <button type="submit" class="btn btn-primary col col-2">Adicionar</button>
+                <button type="submit" class="btn btn-primary col col-md-2">Adicionar</button>
 
         </form>
+
+
         <div id="items-iniciais" class="mt-5">
+            <button id="btnModal" type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target="#completedModal">
+                Exibir items concluídos
+            </button>
+
             <ul class="list-group w-100">
                 @foreach($items as $item)
                     <li id="item-{{ $item->id }}" class="list-group-item d-flex justify-content-between align-items-center">
-                        <div id="item-name-{{ $item->id }}">
-                            <input onclick="markItemAsDone({{ $item->id }})" type="checkbox">
-                            <span>{{ $item->nome }}</span>
-                        </div>
-                        
-                        <div hidden class="input-group w-50" id="input-item-name-{{ $item->id }}">
-                            <input type="text" value="{{ $item->nome }}">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" onclick="editaItem({{ $item->id }})"><i class="fas fa-check"></i></button>
+
+                        <div class="d-flex">
+                            <div>
+                                <button type="button" class="btn btn-outline-success btn-sm mr-1" onclick="markItemAsDone({{ $item->id }})"><i class="fas fa-check"></i></button>
+                                <span id="item-name-{{ $item->id }}">{{ $item->nome }}</span>
                             </div>
-                            @csrf
+
+                            <div hidden class="input-group w-50" id="input-item-name-{{ $item->id }}">
+                                <input class="w-50" type="text" value="{{ $item->nome }}">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" onclick="editaItem({{ $item->id }})"><i class="fas fa-check"></i></button>
+                                </div>
+                                @csrf
+                            </div>
                         </div>
 
                         <span class="d-flex">
@@ -49,11 +57,7 @@
             </ul>
         </div>
 
-        <div class="mt-1">
-
-            <button id="btnModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#completedModal">
-                Exibir items concluídos
-            </button>
+        <div>
 
             <div class="modal fade" id="completedModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="dialog">
@@ -70,13 +74,13 @@
                             <ul class="list-group w-100">
                                 @foreach($completedItems as $item)
                                     <li id="item-{{ $item->id }}" class="list-group-item d-flex justify-content-between align-items-center">
-                                        <div id="item-name-{{ $item->id }}">
-                                            <input onclick="markItemAsUnDone({{ $item->id }})" checked type="checkbox">
-                                            <span>{{ $item->nome }}</span>
+                                        <div>
+                                            <button type="button" class="btn btn-outline-danger btm-sm" onclick="markItemAsUnDone({{ $item->id }})" ><i class="fas fa-times"></i></button>
+                                            <span id="item-name-{{ $item->id }}">{{ $item->nome }}</span>
                                         </div>
 
                                         <div hidden class="input-group w-50" id="input-item-name-{{ $item->id }}">
-                                            <input type="text" value="{{ $item->nome }}">
+                                            <input class="w-50" type="text" value="{{ $item->nome }}">
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary" onclick="editaItem({{ $item->id }})"><i class="fas fa-check"></i></button>
                                             </div>

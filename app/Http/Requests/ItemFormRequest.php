@@ -28,11 +28,4 @@ class ItemFormRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'required' => 'Este campo é obrigatório!',
-            'min' => 'Este campo deve ter ao menos 3 caracteres'
-        ];
-    }
 }
