@@ -30,13 +30,13 @@ class ItemController extends Controller
         $nome = $itemFormRequest->nome;
         Item::create(['nome' => $nome]);
 
-        return redirect()->route('items.index');
+        return redirect()->route('itens.index');
     }
 
     public function destroy(Item $item)
     {
         $item->delete();
-        return redirect()->route('items.index');
+        return redirect()->route('itens.index');
     }
 
     public function update(int $id, Request $request)
