@@ -1,0 +1,44 @@
+Breve resumo do que foi feito no projeto:
+    
+    Como descrito no enunciado do desafio fora criada uma aplicação na linguagem PHP na versão 7.3. Utilizando o framework Laravel com dados sendo persistidos em um banco PostgreSQL, também utilizou-se o Eloquent ORM. A aplicação consiste em uma "Web Application" CRUD onde é possível: criar; listar; excluir e editar itens de uma lista de tarefas. Além dessas operações é possivel também marcar os itens da lista como concluídos bem como desmarca-los em caso e equívoco. 
+     O Front-End da aplicação conta com elementos do framework Bootstrap 4 para estilização e do JQuery para manipulação da DOM e envio de requisições AJAX. A interface possui também botões com ícones a fim de tornar intuitiva a função destes. No módulo de testes foram testadas as principais ações da aplicação.
+     A aplicação foi públicada no Heroku e é possível acessa-la através do endereço: http://rodrigotodo.herokuapp.com/
+
+Itens implementados no projeto:
+    
+    1.Fazer uma aplicação utilizando PHP usando o framework Laravel.
+    2.Utilizar persistência em um banco de dados PostgreSQL.
+    3.Utilizar Eloquent ORM.
+    4.Utilizar Bootstrap 4.
+    5.Utilizar testes de unidade com PHPUnit.
+    6.Publicar projeto no Heroku.
+
+Orientações para execução do projeto em um ambiente local:
+
+        Primeiro é necessário acessar o arquivo "config/database.php" e modificar as variáveis do banco pgsql pois as que estão definidas são as do banco postgres do
+    servidor do heroku, portanto, substituir:
+            
+            'host' => $host,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
+        
+    por:
+
+            'host' => env('DB_HOST'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+
+        Após isso é necessário fazer uma cópia do aquivo ".env.example" e renomear para ".env", após, devem ser definidas no arquivo as variáveis do banco da seguinte
+    forma:
+
+            DB_CONNECTION=pgsql
+            DB_HOST=127.0.0.1
+            DB_PORT=5432
+            DB_DATABASE=homestead <-- substituir pelo nome do banco usado em ambiente local.
+            DB_USERNAME=homestead <-- substituir pelo usuário do banco usado em ambiente local.
+            DB_PASSWORD=secret <-- substituir pela senha do banco usado em ambiente local.
+        
+        Agora basta abrir um terminal na pasta principal do projeto e executar o comando "php artisan migrate" para criar as tabelas no banco local e o comando "php
+    artisan server" para subir o servidor local.
