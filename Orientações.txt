@@ -30,7 +30,7 @@ Orientações para execução do projeto em um ambiente local:
             'username' => env('DB_USERNAME'),
             'password' => env('DB_PASSWORD'),
     
-    depois é preciso comentar da linha 3 até a linha 8 para garantir o funcionamento de tudo. 
+    depois é preciso comentar da linha 3 até a linha 8 do arquivo "config/database.php" para garantir o funcionamento de tudo. 
 
         Após isso é necessário fazer uma cópia do aquivo ".env.example" e renomear para ".env", após, devem ser definidas no arquivo as variáveis do banco da seguinte
     forma:
