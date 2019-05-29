@@ -5,13 +5,13 @@
         <div class="mt-5 text-secondary justify-content-center">
             <h1>To-do List</h1>
         </div>
-        <form class="row" action="{{ route('items.store') }}" method="post">
+        <form class="row" action="{{ route('itens.store') }}" method="post">
             @csrf
             <div class="col col-md-10">
                 <input type="text"
                        name="nome"
                        class="form-control"
-                       placeholder="Adicione aqui um item a lista de tarefas">
+                       placeholder="Adicione aqui um item à lista de tarefas">
             </div>
 
                 <button type="submit" class="btn btn-primary col col-md-2">Adicionar</button>
@@ -19,13 +19,13 @@
         </form>
 
 
-        <div id="items-iniciais" class="mt-5">
+        <div id="itens-iniciais" class="mt-5">
             <button id="btnModal" type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target="#completedModal">
-                Exibir items concluídos
+                Exibir itens concluídos
             </button>
 
             <ul class="list-group w-100">
-                @foreach($items as $item)
+                @foreach($itens as $item)
                     <li id="item-{{ $item->id }}" class="list-group-item d-flex justify-content-between align-items-center">
 
                         <div class="d-flex">
@@ -45,7 +45,7 @@
 
                         <span class="d-flex">
                             <button class="btn btn-outline-info btn-sm" id="btnEdit" onclick="toggle({{ $item->id }})"><i class="fas fa-pencil-alt"></i></button>
-                            <form method="post" action="{{ route('items.destroy', ['item'=>$item->id]) }}"
+                            <form method="post" action="{{ route('itens.destroy', ['item'=>$item->id]) }}"
                             onsubmit="return confirm('Deseja realmente excluir ({{ $item->nome }}) da lista?')">
                                 @csrf
                                 @method('DELETE')
@@ -64,7 +64,7 @@
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h5 class="modal-title">Items concluídos</h5>
+                            <h5 class="modal-title">Itens concluídos</h5>
                             <button class="close" type="button" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
@@ -72,7 +72,7 @@
 
                         <div id="modal-body" class="modal-body">
                             <ul class="list-group w-100">
-                                @foreach($completedItems as $item)
+                                @foreach($completedItens as $item)
                                     <li id="item-{{ $item->id }}" class="list-group-item d-flex justify-content-between align-items-center">
                                         <div>
                                             <button type="button" class="btn btn-outline-danger btm-sm" onclick="markItemAsUnDone({{ $item->id }})" ><i class="fas fa-times"></i></button>
@@ -89,7 +89,7 @@
 
                                         <span class="d-flex">
                             <button class="btn btn-outline-info btn-sm" id="btnEdit" onclick="toggle({{ $item->id }})"><i class="fas fa-pencil-alt"></i></button>
-                            <form method="post" action="{{ route('items.destroy', ['item'=>$item->id]) }}"
+                            <form method="post" action="{{ route('itens.destroy', ['item'=>$item->id]) }}"
                                   onsubmit="return confirm('Deseja realmente excluir ({{ $item->nome }}) da lista?')">
                                 @csrf
                                 @method('DELETE')
@@ -182,7 +182,7 @@
                 contentType: false
             }).done(() => {
                 item.remove();
-                $(item).appendTo('#items-iniciais');
+                $(item).appendTo('#itens-iniciais');
                 location.reload();
             });
         }

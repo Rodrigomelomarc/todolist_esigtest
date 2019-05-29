@@ -12,17 +12,17 @@ class ItemController extends Controller
 {
     public function index()
     {
-        $items = Item::query()
+        $itens = Item::query()
                 ->where('done', '=', 'false')
                 ->orderBy('created_at')
                 ->get();
 
-        $completedItems = Item::query()
+        $completedItens = Item::query()
                         ->where('done', '=', 'true')
                         ->orderBy('created_at')
                         ->get();
 
-        return view('todo.index', compact('items', 'completedItems'));
+        return view('todo.index', compact('itens', 'completedItens'));
     }
     
     public function store(ItemFormRequest $itemFormRequest)
