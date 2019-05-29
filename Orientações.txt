@@ -43,4 +43,4 @@ Orientações para execução do projeto em um ambiente local:
             DB_PASSWORD=secret <-- substituir pela senha do banco usado em ambiente local.
         
         Agora basta abrir um terminal na pasta principal do projeto e executar o comando "php artisan migrate" para criar as tabelas no banco local e o comando "php
-    artisan server" para subir o servidor local.
+    artisan serve" para subir o servidor local.
