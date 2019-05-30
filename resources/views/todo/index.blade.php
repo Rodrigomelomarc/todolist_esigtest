@@ -46,7 +46,7 @@
                         <span class="d-flex">
                             <button class="btn btn-outline-info btn-sm" id="btnEdit" onclick="toggle({{ $item->id }})"><i class="fas fa-pencil-alt"></i></button>
                             <form method="post" action="{{ route('itens.destroy', ['item'=>$item->id]) }}"
-                            onsubmit="return confirm('Deseja realmente excluir este da lista?')">
+                            onsubmit="return confirm('Deseja realmente excluir esta tarefa da lista?')">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-outline-danger btn-sm ml-1"><i class="far fa-trash-alt"></i></button>
@@ -90,7 +90,7 @@
                                         <span class="d-flex">
                             <button class="btn btn-outline-info btn-sm" id="btnEdit" onclick="toggle({{ $item->id }})"><i class="fas fa-pencil-alt"></i></button>
                             <form method="post" action="{{ route('itens.destroy', ['item'=>$item->id]) }}"
-                                  onsubmit="return confirm('Deseja realmente excluir este da lista?')">
+                                  onsubmit="return confirm('Deseja realmente excluir esta tarefa da lista?')">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-outline-danger btn-sm ml-1"><i class="far fa-trash-alt"></i></button>
