@@ -113,19 +113,15 @@
 
 
     </div>
-
-    <script src="{{ asset('js/jquery.js') }}"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-
+    <script type="text/javascript">
         function toggle(id) {
             const inputName = $(`#input-item-name-${id}`);
             const name = $(`#item-name-${id}`);
             if(inputName.is(':hidden')){
-                inputName.removeProp('hidden');
+                inputName.removeAttr('hidden');
                 name.prop('hidden', true);
             } else {
-                name.removeProp('hidden');
+                name.removeAttr('hidden');
                inputName.prop('hidden', true);
             }
         }
